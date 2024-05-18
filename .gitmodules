@@ -1,0 +1,21 @@
+[submodule ".vim/pack/tpope/start/vim-fugitive"]
+	path = .vim/pack/tpope/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule ".vim/pack/vvim-airline/start/vim-airline"]
+	path = .vim/pack/vim-airline/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule ".vim/pack/vim-airlines/start/vim-airlines-themes"]
+	path = .vim/pack/vim-airline/start/vim-airline-theme
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule ".vim/pack/airblade/start/vim-gitgutter"]
+	path = .vim/pack/airblade/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule ".vim/pack/preservim/start/nerdtree"]
+	path = .vim/pack/preservim/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule ".vim/pack/maxbane/start/vim-asm_ca65"]
+	path = .vim/pack/maxbane/start/vim-asm_ca65
+	url = https://github.com/maxbane/vim-asm_ca65.git
+[submodule ".vim/pack/vim-scripts/start/a.vim"]
+	path = .vim/pack/vim-scripts/start/a.vim
+	url = https://github.com/vim-scripts/a.vim.git

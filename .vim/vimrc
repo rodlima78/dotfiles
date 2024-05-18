@@ -1,0 +1,65 @@
+set nocompatible
+
+filetype plugin indent on
+
+set backspace=indent,eol,start  " Allow backspacing over everything in insert mode
+set autoindent                  " Always set auto-indenting on
+set softtabstop=4
+set shiftwidth=4
+set tabstop=8
+set number
+set expandtab
+set autowrite
+set foldmethod=marker
+set fileencodings=ucs-bom,utf-8,latin1
+set matchpairs+=<:>
+set ruler
+set conceallevel=0      " Show exactly how the file is.
+
+set autoindent		" always set autoindenting on
+set incsearch		" do incremental searching
+set cindent
+set background=dark     " so that vim shows correct colors inside tmux
+set hlsearch
+set scrolloff=3
+
+set wildmode=longest:full,full
+set wildmenu
+
+set mouse=a
+
+set cinoptions=:0,l1,g0,t0,(0,Ws
+
+" Tell vim to remember certain things when we exit
+"  '10  :  marks will be remembered for up to 10 previously edited files
+"  "100 :  will save up to 100 lines for each register
+"  :20  :  up to 20 lines of command-line history will be remembered
+"  %    :  saves and restores the buffer list
+"  n... :  where to save the viminfo files
+set viminfo='10,\"100,:20,%,n~/.viminfo
+
+" Arrow keys are of no use
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" cc65 config
+let g:asm_ca65_wdc=1
+let g:asm_ca65_rockwell=1
+if &filetype=='asm-ca65'
+    let &errorformat=&errorformat . ',' . '%*[ ]Error in "%f", line %l, column %c: %m'
+endif
+
+" open manpages with 'Man'
+runtime! ftplugin/man.vim
+let g:ft_man_open_mode = 'vert'
+let g:ft_man_no_sect_fallback = 1
+set keywordprg=:Man
+set splitright
+
+" Airline config
+let g:airline#extensions#wordcount#enabled = 0
+let g:airline#extensions#branch#format = 1
+let g:airline_powerline_fonts = 1
+let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
