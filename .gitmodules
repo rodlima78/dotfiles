@@ -19,3 +19,12 @@
 [submodule ".vim/pack/vim-scripts/start/a.vim"]
 	path = .vim/pack/vim-scripts/start/a.vim
 	url = https://github.com/vim-scripts/a.vim.git
+[submodule ".config/tmux/plugins/tpm"]
+	path = .config/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule ".config/tmux/plugins/tmux-sensible"]
+	path = .config/tmux/plugins/tmux-sensible
+	url = https://git::@github.com/tmux-plugins/tmux-sensible
+[submodule ".config/tmux/plugins/tmux-pain-control"]
+	path = .config/tmux/plugins/tmux-pain-control
+	url = https://git::@github.com/tmux-plugins/tmux-pain-control
