@@ -1,0 +1,35 @@
+[pretty]
+    shortdate = "%C(auto) %h %C(green)%ai%C(auto)%d %s"
+[difftool]
+    prompt = false
+[color]
+    ui = auto
+[push]
+    autoSetupRemote = true
+    default = upstream
+[user]
+    name = Rodolfo Lima
+    email = rodolfo@rodlima.net
+[init]
+    defaultBranch = main
+[advice]
+    skippedCherryPicks = false
+[blame]
+    coloring = repeatedLines
+[column]
+    ui = auto,row
+[branch]
+    sort = -committerdate
+    autoSetupRebase = always
+    autoSetupMerge = always
+[interactive]
+    singleKey = true
+[rebase]
+    autoSquash = true
+[fetch]
+    parallel = 0
+[submodule]
+    recurse = true
+    fetchJobs = 0 
+[include]
+    path = ~/.dotfiles-backup/.gitconfig
