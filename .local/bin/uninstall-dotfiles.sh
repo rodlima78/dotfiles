@@ -11,12 +11,18 @@ config()
 
 # If local repository exists,
 if [ -d "$repo" ]; then
+    config fetch
     if [[ "$(config stash list | tee >(cat 1>&2))" ]]; then
         echo "There are stashed items, refusing to uninstall" >&2
         exit 1
     fi
     if [[ "$(config status -s | tee >(cat 1>&2))" ]]; then
         echo "There are non-committed items, refusing to uninstall" >&2
+        exit 1
+    fi
+    if config branch --list --format='%(upstream:trackshort)' | grep -vq =; then
+        config branch -vv >&2
+        echo "There branches not synchronized with upstream, refusing to uninstall" >&2
         exit 1
     fi
 
