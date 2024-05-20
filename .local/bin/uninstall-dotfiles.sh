@@ -30,7 +30,12 @@ if [ -d "$repo" ]; then
     # (we know it's empty)
     config reset --hard $(config rev-list --max-parents=0 HEAD)
     # Nuke the repo
-    rm -rf "$repo"
+    if mv --backup=number "$repo" ~/UNINSTALLED-dotfiles-repo; then
+        echo "dotfiles repository moved to $HOME/UNINSTALLED-dotfiles-repo" >&2
+    else
+        echo "Can't move the repository, it's still in $repo" >&2
+        exit 1
+    fi
 fi
 
 # Do we need to restore backed up files?
