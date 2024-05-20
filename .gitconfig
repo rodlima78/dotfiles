@@ -27,7 +27,6 @@
 [fetch]
     parallel = 0
 [submodule]
-    recurse = true
     fetchJobs = 0 
 [include]
     path = ~/.dotfiles-backup/.gitconfig
